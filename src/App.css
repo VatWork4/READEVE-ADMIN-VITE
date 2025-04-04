@@ -1,0 +1,50 @@
+/* ปุ่ม Login */
+.custom-login-button {
+  background-color: #654ccb !important; /* blue-500 */
+  color: white !important;
+  border: none !important;
+}
+.custom-login-button:hover {
+  background-color: #775aeb !important; /* blue-600 */
+}
+
+/* ปรับสี label ให้เป็นสีเทา */
+.custom-input + .ant-form-item-label > label {
+  color: #a1a1a1 !important;
+}
+
+/* ปรับขอบ input เมื่อ hover */
+.custom-input:hover {
+  border-color: #845ef9;
+}
+
+/* ปรับขอบ input เมื่อ focus */
+.custom-input:focus {
+  border-color: #845ef9;
+  box-shadow: 0 0 0 2px rgba(132, 94, 249, 0.2);
+}
+
+/* เปลี่ยนสีหัวตาราง */
+.custom-ant-table .ant-table-thead > tr > th {
+  background-color: #a294f9;
+  color: #f5efff;
+  font-weight: 300;
+  text-align: center;
+  border-inline-end: none !important;
+}
+
+/* จัดให้ทุก cell อยู่ตรงกลาง และลบเส้นแนวตั้ง */
+.custom-ant-table .ant-table-cell {
+  text-align: center;
+  border-inline-end: none !important;
+}
+
+/* ลบเส้นขวาของแถวสุดท้าย */
+.custom-ant-table .ant-table-row td:last-child {
+  border-right: none !important;
+}
+
+/* สีเทาสำหรับข้อมูล (tbody) */
+.custom-ant-table .ant-table-tbody > tr > td {
+  color: #7a7a7a;
+}
