@@ -1,15 +1,11 @@
 import { Table, Button, Space } from "antd";
 import HeaderTitle from "../components/ui/HeaderTitle";
 import ProflieMenu from "../components/ui/ProflieMenu";
-import ResultsSearch from "../components/ui/ResultsSearch";
-import {
-  EditOutlined,
-  EyeOutlined,
-  UnorderedListOutlined,
-} from "@ant-design/icons";
 import TableAdmin from "../components/TableAdmin";
 import ButtonEdit from "../components/ui/ButtonEdit";
 import ButtonDetail from "../components/ui/ButtonDetail";
+import ResultsAll from "../components/ui/ResultsAll";
+import SearchInput from "../components/ui/SearchInput";
 // ตัวอย่างข้อมูล
 const dataSource = [
   {
@@ -73,6 +69,10 @@ const columns = [
 ];
 
 export default function Participants() {
+  const onSearch = (value) => {
+    console.log("Search:", value);
+    // ทำการค้นหาจาก value ได้ที่นี่
+  };
   return (
     <div className="container space-y-10">
       <section className="flex justify-between item-center ">
@@ -80,7 +80,12 @@ export default function Participants() {
         <ProflieMenu />
       </section>
       <section>
-        <ResultsSearch countAllTotal={dataSource.length} />
+        <div className="flex  justify-between item-center">
+          <ResultsAll countAllTotal={dataSource.length} countSumTotal={0} />
+          <section>
+            <SearchInput onSearch={onSearch} />
+          </section>
+        </div>
       </section>
       <div>
         <TableAdmin dataSource={dataSource} columns={columns} />
